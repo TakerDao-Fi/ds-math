@@ -11,14 +11,12 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-pragma solidity >0.4.13;
+pragma solidity >=0.6.12;
 
 import "ds-test/test.sol";
 import "./math.sol";
 
 contract DSMathTest is DSTest, DSMath {
-    function setUp() public {}
-
     function testFail_add() public pure {
         add(2 ** 256 - 1, 1);
     }
